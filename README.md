@@ -12,10 +12,6 @@ docker-compose up
 
 ## Compose
 
-### Database (MariaDB)
-
-...
-
 ### PHP (PHP-FPM)
 
 Composer is included
