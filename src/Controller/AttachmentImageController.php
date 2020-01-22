@@ -21,6 +21,12 @@ class AttachmentImageController extends AbstractController
     public function index(int $documentId) : Response
     {
         $document = $this->getDoctrine()->getRepository(Document::class)->find($documentId);
+        
+        if (!$document) 
+        {
+            return $this->json(['message' => 'Document does not exists']);
+        }
+        
         $attachment = $document->getAttachment();
         $images = $attachment->getImages();
         
